@@ -44,7 +44,8 @@ body {
 
 .navbar a:hover,
 .navbar a.active {
-    color: black;
+   
+    color: orchid;
 }
 
 .home {
@@ -81,8 +82,6 @@ body {
     justify-content: space-between;
     width: 345px;
     height: 50px;
-    color: green;
-    
     
 }
 
@@ -104,14 +103,24 @@ body {
     padding: 10px;
     overflow: hidden;
     z-index: 1;
+    transition: .5s;
 }
 
+.button a:nth-child(1):hover {
+    color: purple;
+}
 .button a:nth-child(2) {
     background-color: transparent;
+    color: purple;
+    
+}
+
+.button a:nth-child(2):hover {
+    color: #CBC3E3;
 }
 
 .button a:nth-child(2)::before {
-    background: #purple;
+    background: purple;
 
 }
 
@@ -131,4 +140,35 @@ body {
     width: 100%;
 }
 
+.home-sci {
+    position: absolute;
+    bottom: 40px;
+    width: 170px;
+    display: flex;
+    justify-content: space-between;
+}
 
+.home-sci a {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid purple;
+    border-radius: 50%;
+    font-size: 20px;
+    color: purple;
+    text-decoration: none;
+}
+
+.home-sci a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: red;
+}

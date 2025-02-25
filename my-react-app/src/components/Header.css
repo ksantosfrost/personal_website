@@ -1,0 +1,34 @@
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background: transparent; /* or you can use white (#fff) if you want a solid header */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+  }
+  
+  .logo {
+    font-size: 25px;
+    color: #333; /* Darker text for the logo */
+    text-decoration: none;
+    font-weight: 600;
+  }
+  
+  /* NAVBAR LINKS */
+  .navbar a {
+    font-size: 18px;
+    color: #333;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+    transition: 0.3s;
+  }
+  
+  .navbar a:hover,
+  .navbar a.active {
+    color: #777; /* Slightly darker/lighter shade for hover state */
+  }

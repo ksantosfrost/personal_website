@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @import url('https;//fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
 
 
@@ -172,25 +173,54 @@ body {
     left: 0;
     width: 0;
     height: 100%;
-    background: purple;
-    z-index: -1;
-    transition: .5s;
+    background: red;
+}
+=======
+@import url('https;//fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 
-.home-sci a:hover {
-    color: #CBC3E3;
+body {
+    background: #260433;
 }
 
-.home-sci a:hover::before {
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
+    padding: 20px 10%;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
 }
 
-.profile-image {
-    position: absolute;
-    right: 20%;
-    bottom: 0;
-    width: 500px; /* Adjust the width as needed */
-    height: auto; /* Keep aspect ratio */
-    z-index: -100; /* Ensures it's behind content but visible */
-    opacity: 0.5; /* Slight transparency for better blending */
+.logo {
+    font-size: 25px;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
 }
+
+.navbar a {
+    font-size: 18px;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+    transition: .3s;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: black;
+}
+>>>>>>> 070ca0a (Update style and website HTML)

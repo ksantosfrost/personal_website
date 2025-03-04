@@ -1,0 +1,25 @@
+/* Google Fonts (same as before) */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* BODY: Change the background to a neutral grayish-white. 
+   Also switch text to a darker gray (#333) for contrast. */
+body {
+  background: #f5f5f5;
+  color: #333;
+}
+
+
+
+
+
+
+
+  
+  

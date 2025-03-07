@@ -1,6 +1,7 @@
 // src/pages/Home.js
 import React from 'react';
 import './Home.css';
+import faceShot from './head_main1.png';
 
 
 function Home() {
@@ -18,6 +19,10 @@ function Home() {
         <div className="button">
           <a href="#">Hire Me</a>
           <a href="#">Connect</a>
+        </div>
+
+        <div className="face-shot">
+          <img src={faceShot} alt="Keanu" />
         </div>
 
         <div className="home-sci">

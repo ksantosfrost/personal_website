@@ -17,7 +17,7 @@ function Home() {
           Feel free to connect with me!
         </p>
         <div className="button">
-          <a href="#">Hire Me</a>
+          <a href="#">YouTube</a>
           <a href="#">Connect</a>
         </div>
 

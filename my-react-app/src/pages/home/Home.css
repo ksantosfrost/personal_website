@@ -1,173 +1,235 @@
+/* HOME SECTION */
 .home {
-    display: flex;
-    align-items: center;
-    height: 100vh;
-    padding: 0 10%;
-    position: relative;
-    overflow: hidden;
-  }
-  
-  .home::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -2;  /* Place it behind the .home content */
-    /* Here we layer a semi-transparent overlay with your image */
-    background: 
-    linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), /* dark overlay */
-    url("gorod-zdaniia-zdanie-krasnyi-fon-minimalizm-oblaka-zakat.jpg") center/cover no-repeat;
-  background-blend-mode: overlay;  
-  }
+  display: flex;
+  align-items: center;
+  height: 100vh;
+  padding: 0 10%;
+  position: relative;
+  overflow: hidden;
+  /* Overall text color - lighter for better contrast on dark background */
+  color: white; 
+}
 
-  .home-content {
-    max-width: 600px;
-  }
-  
-  .home-content h1 {
-    font-size: 56px;
-    font-weight: 700;
-    line-height: 1.2;
-  }
-  
-  .home-content h3 {
-    font-size: 32px;
-    font-weight: 700;
-    color: #888; 
-  }
-  
-  .home-content p {
-    font-size: 16px;
-    margin: 50px 0 40px;
-    line-height: 1.4; 
-  }
-  
-  /* BUTTONS */
-  .home-content .button {
-    display: flex;
-    justify-content: space-between;
-    width: 345px;
-    height: 50px;
-  }
+.home::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -2;  
+  /* 
+    1) Dark overlay for better text readability
+    2) The city image
+    3) Blend mode: overlay for a neon effect
+    4) filter: blur(3px) to make the background look distant
+  */
+  background:
+  radial-gradient(
+    circle at 80% 80%,    /* place the center near bottom-right */
+    rgba(0,0,0,0) 10%,    /* fully transparent up to 10% radius */
+    rgba(0,0,0,0.9) 25%   /* near-black by 25% radius, so smaller fade area */
+  ),
+  url("night_city_by_rmradev_dfq7ch0-pre.jpg") center/cover no-repeat;
+  background-blend-mode: overlay;
+  filter: blur(3px);
 
-  .face-shot img {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    opacity: .7; 
-    z-index: -1;  
-  }
-  
+}
 
-  .button a {
-    position: relative;
-    width: 150px;
-    height: 100%;
-    justify-content: center;
-    align-items: center;
-    display: inline-flex;
-    background-color: #888;
-    border: 2px solid #888;
-    border-radius: 8px;
-    font-size: 19px;
-    color: #f5f5f5;
-    text-decoration: none;
-    font-weight: 600;
-    letter-spacing: 1px;
-    padding: 10px;
-    overflow: hidden;
-    z-index: 1;
-    transition: 0.5s;
-  }
-  
-  .button a:nth-child(1):hover {
-    color: #888;
-  }
-  
-  .button a:nth-child(2) {
-    background-color: transparent;
-    color: #888;
-  }
-  
-  .button a:nth-child(2):hover {
-    color: #f5f5f5;
-  }
-  
-  /* The "before" pseudo-element for the hover effect */
-  .button a:nth-child(2)::before {
-    background: #888;
-  }
-  
-  .button a::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 0;
-    height: 100%;
-    background: #f5f5f5;
-    z-index: -1;
-    transition: 0.5s;
-  }
-  
-  .button a:hover::before {
-    width: 100%;
-  }
+/* Main content container */
+.home-content {
+  max-width: 600px;
+  /* If you want text centered, add text-align: center; */
+}
 
-  .home-sci {
-    position: absolute;
-    bottom: 40px;
-    width: 170px;
-    display: flex;
-    justify-content: space-between;
-  }
-  
-  .home-sci a {
-    position: relative;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    width: 40px;
-    height: 40px;
-    background: transparent;
-    border: 2px solid #888;
-    border-radius: 50%;
-    font-size: 20px;
-    color: #888;
-    text-decoration: none;
-    overflow: hidden;
-    /* Smooth color transition for the icon */
-    transition: color 0.3s ease;
-  }
+/* Headings & paragraph */
+.home-content h1 {
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 1.2;
+  /* Brighter color for main heading */
+  color: #fff;
+}
 
-  /* The icon inside the anchor */
+.home-content h3 {
+  font-size: 32px;
+  font-weight: 700;
+  /* Slightly lighter gray than the heading */
+  color: #cccccc;
+}
+
+.home-content p {
+  font-size: 16px;
+  margin: 50px 0 40px;
+  line-height: 1.4;
+  /* Use the .home color or override with #ddd if you want it even lighter */
+}
+
+/* BUTTONS */
+.home-content .button {
+  display: flex;
+  justify-content: space-between;
+  width: 345px;
+  height: 50px;
+}
+
+/* 
+  Darker background for the first button, 
+  with a subtle neon-like color. 
+*/
+.button a {
+  position: relative;
+  width: 150px;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  display: inline-flex;
+  background-color: transparent;    
+  border: 2px solid #fa0909;
+  border-radius: 8px;
+  font-size: 19px;
+  color: #fa0909;           
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: 1px;
+  padding: 10px;
+  overflow: hidden;
+  z-index: 1;
+  transition: 0.5s;
+}
+
+/* First button hover text color can invert to a neon accent if desired */
+.button a:nth-child(1):hover {
+  color: #fa0909; 
+  border-color: white;
+  
+}
+
+/* Second button is transparent with a slight neon border color */
+.button a:nth-child(2) {
+  background-color: transparent;
+  color: #76e4ff;       /* neon accent for text */
+  border-color: #76e4ff;
+}
+
+/* On hover, invert text color or go white */
+.button a:nth-child(2):hover {
+  color: #76e4ff;
+  border-color: white;
+}
+
+/* The "before" pseudo-element for the second button uses the same neon color */
+.button a:nth-child(2)::before {
+  background: #000000;
+}
+
+/* The universal before overlay for button hover */
+.button a::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: black;  /* or #444 if you want a darker fill */
+  z-index: -1;
+  transition: 0.5s;
+}
+
+.button a:hover::before {
+  width: 100%;
+}
+
+.face-shot::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("headshotbg.jpg");
+  background-size: cover;
+  background-position: center;
+  opacity: 0.5; /* adjust transparency as needed */
+  border-radius: 50%; /* match the parent if needed */
+  z-index: -1; /* place it behind the content */
+}
+
+/* FACE SHOT */
+.face-shot img {
+  position: absolute;
+  top: 50%;
+  left: 60%;
+  transform: translate(-50%, -50%);
+  opacity: 0.8;
+  border-radius: 50%;   /* Make the container circular */
+  overflow: hidden;   
+  border: 3px solid #fa0909;
+  background-image: url("headshotbg.jpg");
+    
+   border: 4px solid #132946; /* Light blue ring */
+  box-shadow: 
+    0 0 20px #76e4ff,
+    0 0 40px #132946,
+    0 0 60px #132946;
+    pointer-events: none;
+
+  
+}
+
+
+/* SOCIAL ICONS */
+.home-sci {
+  position: absolute;
+  bottom: 40px;
+  width: 170px;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Circular icons */
+.home-sci a {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  border: 2px solid #76e4ff; /* match neon accent color */
+  border-radius: 50%;
+  font-size: 20px;
+  color: #76e4ff;
+  text-decoration: none;
+  overflow: hidden;
+  transition: color 0.3s ease;
+}
+
+/* The icon inside the anchor */
 .home-sci a i {
-  color: #888;
+  color: inherit; /* use the parent's color (#76e4ff) */
   font-size: 20px;
   transition: color 0.3s ease;
 }
-  
-  /* The "before" pseudo-element slides in from the left to fill the circle */
-  .home-sci a::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 0;
-    height: 100%;
-    background: #888;
-    z-index: -1;
-    transition: 0.5s;
-  }
-  
-  /* On hover, the pseudo-element's width expands to 100%, creating a fill */
-  .home-sci a:hover::before {
-    width: 100%;
-  }
 
-  .home-sci a:hover i {
-    color: #f5f5f5;
-  }
+/* The "before" pseudo-element slides in from the left to fill the circle */
+.home-sci a::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: #fff; /* white fill on hover */
+  z-index: -1;
+  transition: 0.5s;
+}
+
+/* On hover, fill the circle with white, icon becomes dark for contrast */
+.home-sci a:hover::before {
+  width: 100%;
+}
+
+.home-sci a:hover i {
+  color: #222; /* dark text on white fill */
+}

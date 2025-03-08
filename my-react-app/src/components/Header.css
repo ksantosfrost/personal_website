@@ -13,7 +13,7 @@
   
   .logo {
     font-size: 25px;
-    color: #333; /* Darker text for the logo */
+    color: #fa0909; /* Darker text for the logo */
     text-decoration: none;
     font-weight: 600;
   }
@@ -21,7 +21,7 @@
   /* NAVBAR LINKS */
   .navbar a {
     font-size: 18px;
-    color: #333;
+    color: white;
     text-decoration: none;
     font-weight: 500;
     margin-left: 35px;

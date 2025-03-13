@@ -23,7 +23,9 @@ function Home() {
 
         <div className="face-shot">
           <img src={faceShot} alt="Keanu" />
-        </div>
+       </div>
+        
+        
 
         <div className="home-sci">
           <a href="#"><i className="bx bxl-linkedin"></i></a>

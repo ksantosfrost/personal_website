@@ -213,11 +213,17 @@
   transition: 0.5s;
 }
 
+.home-sci a:hover {
+  border-color: white;
+}
+
 /* On hover, fill the circle with white, icon becomes dark for contrast */
 .home-sci a:hover::before {
   width: 100%;
+
 }
 
 .home-sci a:hover i {
-  color: white; /* dark text on white fill */
+  color: white;
+  
 }
